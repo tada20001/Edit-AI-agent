@@ -8,13 +8,13 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 google_api_key = os.environ.get("GOOGLE_API_KEY")
 # ❗수정됨: 각 LLM에 temperature 값을 설정합니다.
 llm_generate = ChatGoogleGenerativeAI(
-    model="gemini-1.5-pro-latest",
+    model="gemini-2.0-flash",
     google_api_key=google_api_key,
     temperature=0.2 # 약간의 창의성을 허용
 )
 
 llm_reflect = ChatGoogleGenerativeAI(
-    model="gemini-1.5-flash-latest",
+    model="gemini-2.0-flash",
     google_api_key=google_api_key,
     temperature=0.0 # 매우 엄격하고 일관된 평가를 위해
 )
